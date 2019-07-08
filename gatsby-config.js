@@ -10,4 +10,7 @@ module.exports = {
     title: "ChunLin's Portfolio",
     author: "ChunLin Wu",
   },
+  plugins: [
+    'gatsby-plugin-sass',
+  ]
 }
