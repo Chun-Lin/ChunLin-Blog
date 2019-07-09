@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "./Header"
 import layoutStyles from "./Layout.module.scss"
+import Footer from "./Footer"
 
 const Layout = ({ pageStyle, children }) => {
   return (
@@ -9,11 +10,14 @@ const Layout = ({ pageStyle, children }) => {
         <Header />
         <div
           className={
-            pageStyle === 'center' ? layoutStyles.centerContent : layoutStyles.content
+            pageStyle === "center"
+              ? layoutStyles.centerContent
+              : layoutStyles.content
           }
         >
           {children}
         </div>
+        <Footer />
       </div>
     </div>
   )
