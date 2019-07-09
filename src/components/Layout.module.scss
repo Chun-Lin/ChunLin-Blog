@@ -15,7 +15,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 80vw;
   padding: 1rem;
   
   display: flex;
@@ -23,6 +23,18 @@
   min-height: 100vh;
 }
 
+.center-content{
+  flex-grow: 1;
+  color: #98986A;
+  padding: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .content{
   flex-grow: 1;
+  color: #98986A;
+  padding: 1.5rem;
 }
