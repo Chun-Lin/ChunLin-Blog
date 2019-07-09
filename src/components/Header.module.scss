@@ -39,7 +39,17 @@
       box-shadow: 0 0 0 3px #98986A;
       border-radius: 1px;
     }
+  }  
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    text-align: center;
+    flex-direction: column;
+
+    nav {
+      margin: 1rem;
+    }
   }
-  
 }
 
