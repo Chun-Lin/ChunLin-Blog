@@ -4,6 +4,7 @@
   align-items: center;
 
   .h1 {
+    margin: 0;
     a {
       color: #AFA38F;
       text-decoration: none;
@@ -14,16 +15,29 @@
     display: flex;
     list-style-type: none;
     margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+    }
     
     .nav-item{
+      padding: 0.5rem;
       color: #AFA38F;
       font-size: 1rem;
+
       margin-right: 1.3rem;
       text-decoration: none;
       
       &:hover{
         color: #98986A;
       }
+    }
+
+    .active-nav-item{
+      color: #98986A;
+      box-shadow: 0 0 0 3px #98986A;
+      border-radius: 1px;
     }
   }
   

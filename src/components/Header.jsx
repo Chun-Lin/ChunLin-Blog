@@ -21,17 +21,17 @@ const Header = () => {
       <nav>
         <ul className={headerStyles.navList}>
           <li>
-            <Link to="/" className={headerStyles.navItem}>
+            <Link to="/" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/blog" className={headerStyles.navItem}>
+            <Link to="/blog" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
               Blog
             </Link>
           </li>
           <li>
-            <Link to="/contact" className={headerStyles.navItem}>
+            <Link to="/contact" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
               Contact
             </Link>
           </li>
