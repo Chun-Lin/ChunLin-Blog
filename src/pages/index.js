@@ -22,7 +22,7 @@ const Index = () => {
     query {
       desktop: file(relativePath: { eq: "background-image.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
