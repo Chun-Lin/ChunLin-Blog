@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 
@@ -13,14 +14,12 @@ export const query = graphql`
         json
       }
     }
-    allContentfulAsset(filter: { title: { eq: $slug } }) {
+    allContentfulAsset(filter: { title: { eq: "hair" } }) {
       edges {
         node {
           title
           fluid {
-            src
-            srcSet
-            sizes
+            ...GatsbyContentfulFluid
           }
         }
       }
@@ -33,8 +32,9 @@ const Blog = props => {
   return (
     <Layout>
       {props.data.allContentfulAsset.edges[0] ? (
-        <img src={props.data.allContentfulAsset.edges[0].node.fluid.src} />
+        <Img fluid={props.data.allContentfulAsset.edges[0].node.fluid} />
       ) : null}
+      {/* <img src={props.data.allContentfulAsset.edges[0].node.fluid.src} /> */}
       <h1>{title}</h1>
       <p>{publishedDate}</p>
       {documentToReactComponents(body.json)}

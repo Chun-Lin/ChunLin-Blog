@@ -1,16 +1,10 @@
 .bg-image{
-  /* The image used */
-  background-image: url("../images//background-image.jpg");
-
   min-height: 100vh;
 
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
-  /* Needed to position the navbar */
-  position: relative;
 }
 
 .container {
