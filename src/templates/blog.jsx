@@ -14,7 +14,7 @@ export const query = graphql`
         json
       }
     }
-    allContentfulAsset(filter: { title: { eq: "hair" } }) {
+    allContentfulAsset(filter: { title: { eq: $slug } }) {
       edges {
         node {
           title
