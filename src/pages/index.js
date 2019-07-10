@@ -8,6 +8,9 @@ import {
   faGithub,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+// import layoutStyles from "./Layout.module.scss"
 
 let icons = null
 icons = [faGithub, faTwitter, faFacebook]
@@ -15,11 +18,29 @@ icons = [faGithub, faTwitter, faFacebook]
 library.add(fab, ...icons)
 
 const Index = () => {
+  const imageData = useStaticQuery(graphql`
+    query {
+      desktop: file(relativePath: { eq: "background-image.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
   return (
-    <Layout pageStyle="center">
-      <h1>Hello,</h1>
-      <h1>I'm Gary, a web front-end developer.</h1>
-    </Layout>
+    <BackgroundImage
+      Tag="div"
+      className="bg-image"
+      fluid={imageData.desktop.childImageSharp.fluid}
+      backgroundColor={`#ffffff`}
+    >
+      <Layout contentStyle="gold">
+        <h1>Hello,</h1>
+        <h1>I'm Gary, a web front-end developer.</h1>
+      </Layout>
+    </BackgroundImage>
   )
 }
 
