@@ -13,14 +13,28 @@ export const query = graphql`
         json
       }
     }
+    allContentfulAsset(filter: { title: { eq: $slug } }) {
+      edges {
+        node {
+          title
+          fluid {
+            src
+            srcSet
+            sizes
+          }
+        }
+      }
+    }
   }
 `
 
 const Blog = props => {
   const { title, publishedDate, body } = props.data.contentfulChunLinBlog
-
   return (
     <Layout>
+      {props.data.allContentfulAsset.edges[0] ? (
+        <img src={props.data.allContentfulAsset.edges[0].node.fluid.src} />
+      ) : null}
       <h1>{title}</h1>
       <p>{publishedDate}</p>
       {documentToReactComponents(body.json)}
