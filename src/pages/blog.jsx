@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 import blogStyles from "./blog.module.scss"
+import Head from "../components/Head"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -21,6 +22,12 @@ const BlogPage = () => {
 
   return (
     <Layout>
+      <Head
+        title="Blog"
+        metaName="blog"
+        metaContent="This is the list of blogs"
+      />
+      <h1>Blog</h1>
       <ol className={blogStyles.posts}>
         {data.allContentfulChunLinBlog.edges.map(edge => {
           const { slug, title, publishedDate } = edge.node

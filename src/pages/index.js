@@ -7,10 +7,11 @@ import {
   faTwitter,
   faGithub,
   faFacebook,
-  faLinkedin
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import Head from "../components/Head"
 // import layoutStyles from "./Layout.module.scss"
 
 let icons = null
@@ -38,6 +39,11 @@ const Index = () => {
       backgroundColor={`#ffffff`}
     >
       <Layout contentStyle="gold">
+        <Head
+          title="Home"
+          metaName="home"
+          metaContent="This is Chunlin's homepage"
+        />
         <h1>Hello,</h1>
         <h1>I'm Gary, a web front-end developer.</h1>
       </Layout>
