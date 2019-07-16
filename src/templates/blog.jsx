@@ -32,7 +32,7 @@ const Blog = props => {
   return (
     <Layout contentStyle="grey">
       {props.data.allContentfulAsset.edges[0] ? (
-        <Img fluid={props.data.allContentfulAsset.edges[0].node.fluid} />
+        <Img fluid={props.data.allContentfulAsset.edges[0].node.fluid} alt={title}/>
       ) : null}
       <h1>{title}</h1>
       <p>{publishedDate}</p>

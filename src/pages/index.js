@@ -37,6 +37,7 @@ const Index = () => {
       className="bg-image"
       fluid={imageData.desktop.childImageSharp.fluid}
       backgroundColor={`#ffffff`}
+      alt="Index Background Image"
     >
       <Layout contentStyle="gold">
         <Head
