@@ -7,13 +7,14 @@ import {
   faTwitter,
   faGithub,
   faFacebook,
+  faLinkedin
 } from "@fortawesome/free-brands-svg-icons"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 // import layoutStyles from "./Layout.module.scss"
 
 let icons = null
-icons = [faGithub, faTwitter, faFacebook]
+icons = [faGithub, faTwitter, faFacebook, faLinkedin]
 
 library.add(fab, ...icons)
 

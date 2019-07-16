@@ -29,6 +29,12 @@ const Footer = () => {
             className={footerStyles.footerIcon}
           />
         </a>
+        <a href="https://www.linkedin.com/in/chunlin-wu-4114809b/">
+          <FontAwesomeIcon
+            icon={["fab", "linkedin"]}
+            className={footerStyles.footerIcon}
+          />
+        </a>
         <a href="https://www.facebook.com/profile.php?id=1624933215">
           <FontAwesomeIcon
             icon={["fab", "facebook"]}
